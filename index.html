@@ -2,44 +2,122 @@
 <html>
 
 <head>
+  <!-- Meta -->
   <meta charset="utf-8" />
   <meta name="description" content="Area and Perimeter, with JavaScript" />
   <meta name="keywords" content="immaculata, ics2o" />
   <meta name="author" content="Logan Connors" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="192x192" href="./images/android-chrome-192x192.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
   <link rel="manifest" href="./images/site.webmanifest" />
+  <!-- MDL -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
+  <!-- Linking JS file -->
   <script src="js/script.js"></script>
-  <title>R6 TTK Calculator</title>
-  <h2>Unit 2 Assignment</h2>
-  <h5>
-    <nav>
-      <a href="#R6_TTK_Calculator">R6 TTK Calculator</a><br>
-      <a href="#a_and_p_of_torus">Area and Volume of a Torus</a>
-    </nav>
-</h5>
+  <!-- Fixed Header -->
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Unit 2 Assignment</span>
+      </div>
+    </header>
+    <!-- Page Title -->
+    <title>R6 TTK Calculator</title>
+    <main class="mdl-layout__content">
+      <h5>
+        <h4>Table of contents</h4>
+        <nav>
+          <a href="#R6_TTK_Calculator">R6 Time To Kill Calculator</a><br>
+          <a href="#a_and_p_of_torus">Area and Volume of a Torus</a>
+        </nav>
+      </h5>
 </head>
 
 <body>
   <br>
   <div id="R6_TTK_Calculator">
-    <h3>TTK Calculator for Rainbow Six Siege</h3>
+    <h3>Time To Kill Calculator for Rainbow Six Siege</h3>
+    <!-- formula for TTK -->
+    <h4>Formula</h4>
+    <h5>(60 / RPM)x(Shots to kill an opponent - 1)</h5>
+    <br>
+    <!-- First Numeric Textfield with Floating Label for TTK -->
+    <form action="#">
+      <p>RPM</p>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="RPM">
+        <label class="mdl-textfield__label" for="TTK">Number...</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+      </div>
+    </form>
+    <!-- Second Numeric Textfield with Floating Label for TTK -->
+    <form action="#">
+      <p>Damage</p>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="damage">
+        <label class="mdl-textfield__label" for="TTK">Number...</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+      </div>
+    </form>
+    <!-- Third Numeric Textfield with Floating Label for TTK -->
+    <form action="#">
+      <p>Opponent Health</p>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="opponent_Health">
+        <label class="mdl-textfield__label" for="TTK">Number...</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+      </div>
+    </form>
+    <!-- Raised button with ripple for TTK -->
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+      Get Answer
+    </button>
+    <div id="TTK_answer">
   </div>
-  <h4>Formula</h4>
-  <h5>(60 / RPM)x(Shots to kill an opponent - 1)</h5>
   <br>
   <div id="a_and_p_of_torus">
     <h3>Area and Volume of a Torus</h3>
-    <a src="./images/torus_image.png"></a>
+    <!-- an image of a torus -->
+    <img src="./images/torus_image.png" alt="Picture of a Torus" width="50%" height="50%" /></img>
+    <!-- formula of a torus -->
     <h4>Formula</h4>
-    <h5>Area: (2 x Pi x major radius) x (2 x Pi x minor radius)</h5>
-    <h5>Volume: (Pi x major radius<sup>2</sup>) x (2 x Pi x minor radius)</h5>
-
+    <h5>Area: (2 x Pi x major radius(R)) x (2 x Pi x minor radius(r))</h5>
+    <h5>Volume: (Pi x major radius<sup>2</sup>(R)) x (2 x Pi x minor radius(r))</h5>
+    <br>
+    <!-- First Numeric Textfield with Floating Label for Torus -->
+    <form action="#">
+      <p>Major Radius</p>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+        <label class="mdl-textfield__label" for="sample4">Number...</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+      </div>
+    </form>
+    <!-- Second Numeric Textfield with Floating Label for Torus -->
+    <form action="#">
+      <p>Minor Radius</p>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+        <label class="mdl-textfield__label" for="sample4">Number...</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+      </div>
+    </form>
+    <!-- Raised button with ripple for Torus -->
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+      Get Answer
+    </button>
+    <p>
+      <!-- Answers for a Torus -->
+    <div id="area"></div>
+    <div id="volume"></div>
+    </p>
+    <br>
   </div>
 </body>
 
