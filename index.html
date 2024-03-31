@@ -74,11 +74,12 @@
         <span class="mdl-textfield__error">Input is not a number!</span>
       </div>
     </form>
-    <!-- Raised button with ripple for TTK -->
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" action="javascript:calculateTTK()">
-      Get Answer
-    </button>
-    <div id="TTK_answer">
+    <!-- Button to calculate answers -->
+    <form action="javascript:calculateTTK()">
+      <input type="submit" value="Calculate TTK">
+    </form>
+    <!-- Answer for TTK -->
+    <p><div id="TTK_answer"></p>
   </div>
   <br>
   <div id="a_and_p_of_torus">
@@ -92,26 +93,26 @@
     <br>
     <!-- First Numeric Textfield with Floating Label for Torus -->
     <form action="#">
-      <p>Major Radius</p>
+      <p>Major Radius in cm</p>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
-        <label class="mdl-textfield__label" for="sample4">Number...</label>
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="major_Radius">
+        <label class="mdl-textfield__label" for="Torus">Number...</label>
         <span class="mdl-textfield__error">Input is not a number!</span>
       </div>
     </form>
     <!-- Second Numeric Textfield with Floating Label for Torus -->
     <form action="#">
-      <p>Minor Radius</p>
+      <p>Minor Radius in cm</p>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
-        <label class="mdl-textfield__label" for="sample4">Number...</label>
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="minor_Radius">
+        <label class="mdl-textfield__label" for="Torus">Number...</label>
         <span class="mdl-textfield__error">Input is not a number!</span>
       </div>
     </form>
-    <!-- Raised button with ripple for Torus -->
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" action="javascript:calculateTorus()">
-      Get Answer
-    </button>
+    <!-- Button to calculate answers -->
+    <form action="javascript:calculateTorus()">
+      <input type="submit" value="Calculate Torus">
+    </form>
     <p>
       <!-- Answers for a Torus -->
     <div id="area"></div>
